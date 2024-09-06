@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    >
+    <title>Pokémon</title>
+</head>
+<body>
+    <section class="hero is-fullheight">
+        <div class="hero-body">
+            <div class="container is-flex is-align-items-center">
+                <div class="content" style="flex: 1;">
+                    <p class="title">Pokemon</p>
+                    <p class="subtitle">Un site pour tout savoir sur les Pokemon
+                    </p>
+                </div>
+                <div class="box" style="flex: 2;">
+                    <form onsubmit="handleSubmit()">
+                        <div class="field">
+                            <p class="control has-icons-left has-icons-right">
+                                <input class="input" type="text" placeholder="Utilisateur" id="user">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                                <span class="icon is-small is-right">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="field">
+                            <p class="control has-icons-left">
+                                <input class="input" type="password" placeholder="Password" id="pwd">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="field">
+                            <p class="control">
+                                <button class="button is-success">
+                                    Login
+                                </button>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function handleSubmit() {
+            event.preventDefault();
+            let user = document.getElementById('user').value;
+            let pwd = document.getElementById('pwd').value;
+            if (user == "admin" && pwd == "abc123")
+                window.location.href = "/tableau";
+            else
+            alert("identifiants incorrects");
+            console.log(user);
+        }
+    </script>
+</body>
+</html>
