@@ -1,2 +1,2 @@
 # Exercice_1_PI
-Exercice 1 du projet integrateur
+Exercice 1 du projet intégrateur
